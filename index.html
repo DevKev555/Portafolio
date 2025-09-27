@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kevin12 — Portafolio</title>
+  <meta name="description" content="Portafolio de Kevin12, scripter en Roblox. Aquí se muestran algunos de sus proyectos y mecánicas desarrolladas en juegos.">
+
+  <!-- Open Graph / Redes sociales -->
+  <meta property="og:title" content="Kevin12 — Portafolio Roblox">
+  <meta property="og:description" content="Portafolio de Kevin12, scripter en Roblox. Aquí se muestran algunos de sus proyectos y mecánicas desarrolladas en juegos.">
+  <meta property="og:image" content="https://cdn.discordapp.com/avatars/1061300158630998128/ed7195a6a3d13428dcf2249c05947d2d.webp?size=100">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header (sticky) -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Kevin12 — Portafolio</h1>
+      </div>
+      <nav aria-label="Menú principal">
+        <a href="#sobre-mi" data-key="nav_sobre">Sobre mí</a>
+        <a href="#proyectos" data-key="nav_proyectos">Proyectos</a>
+        <a href="#contacto" data-key="nav_contacto">Contacto</a>
+
+        <!-- Selector de idioma -->
+        <select id="languageSelector">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Sobre mí -->
+    <section class="hero" id="sobre-mi" aria-labelledby="sobre-titulo">
+      <div class="hero-left">
+        <h2 id="sobre-titulo" data-key="sobre_titulo">Hola — Soy Kevin12</h2>
+        <p class="lead" data-key="sobre_lead">Scripter con más de 2 años de experiencia creando mecánicas o sistemas.</p>
+        <p data-key="sobre_extra">He usado Roblox Studio durante más de 4 años y tengo gran capacidad para aprender rápidamente y encontrar soluciones creativas a los problemas.</p>
+
+        <ul class="skills">
+          <li data-key="skill_lua">Lua/Luau (Roblox Studio)</li>
+          <li data-key="skill_networking">Seguridad / Networking — conocimientos prácticos</li>
+          <li data-key="skill_optimizacion">Optimización de rendimiento — conocimientos prácticos</li>
+        </ul>
+
+        <a href="#proyectos" class="btn" data-key="btn_ver_proyectos">Ver Proyectos</a>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <img src="https://cdn.discordapp.com/avatars/1061300158630998128/ed7195a6a3d13428dcf2249c05947d2d.webp?size=256" alt="Kevin12" class="avatar">
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" aria-labelledby="proy-titulo">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="proy-titulo" data-key="proyectos_titulo">Proyectos (Videos)</h3>
+        </div>
+        <div class="projects-grid">
+
+          <!-- Proyecto 1 -->
+          <article class="proyecto fade-up" tabindex="0">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/Bl28VR0_yHw"
+                title="Video del Juego - Dance Sync System"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="content">
+              <h4 id="p1-title" data-key="proyecto1_titulo">Dance Sync System</h4>
+              <p data-key="proyecto1_desc">Sistema que permite sincronizar bailes con otros jugadores.</p>
+              <a class="play-link" href="https://www.youtube.com/watch?v=Bl28VR0_yHw" target="_blank" rel="noopener noreferrer" data-key="btn_ver_youtube">Ver en YouTube</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="proyecto fade-up" tabindex="0">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/sXHpJ7PM66A"
+                title="Video del Juego - NPCs System"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="content">
+              <h4 id="p2-title" data-key="proyecto2_titulo">NPCs System</h4>
+              <p data-key="proyecto2_desc">This system was inspired by GTA 5, where NPCs react to events such as gunshots. They have ragdoll when dying and facial expressions.</p>
+              <a class="play-link" href="https://www.youtube.com/watch?v=sXHpJ7PM66A" target="_blank" rel="noopener noreferrer" data-key="btn_ver_youtube">Ver en YouTube</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="contacto-titulo" data-key="contacto_titulo">Contacto & Redes</h3>
+        </div>
+        <div class="contact-list">
+          <a class="contact-item" href="https://discord.gg/vUe9c8bGp7" target="_blank" rel="noopener noreferrer">
+            <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg"
+                 alt="Discord logo" />
+            <div>
+              <p class="kicker" data-key="contact_discord">Discord</p>
+              <p data-key="contact_discord_desc">Discord Server</p>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://www.roblox.com/es/users/1139246620/profile" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/2048px-Roblox_%282025%29_%28App_Icon%29.svg.png"
+                 alt="Roblox logo" />
+            <div>
+              <p class="kicker" data-key="contact_roblox">Roblox</p>
+              <p data-key="contact_roblox_desc">Mi Perfil</p>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://www.youtube.com/@Kevin12-DEV" target="_blank" rel="noopener noreferrer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiwX0s0adw2u0QowIZbamUhIyVVaPb339eBA&s"
+                 alt="Youtube Logo" />
+            <div>
+              <p class="kicker" data-key="contact_youtube">Youtube</p>
+              <p data-key="contact_youtube_desc">Mi canal</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container center">
+      <p data-key="footer">© 2025 Kevin12. Todos los derechos reservados.</p>
+      <a href="#sobre-mi" class="btn" data-key="btn_volver_inicio" style="margin-top:12px;display:inline-block;">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

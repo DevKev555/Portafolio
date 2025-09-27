@@ -1,0 +1,494 @@
+/* ================================
+   El "mejor estilo del mundo" v1.0
+   Portafolio Roblox — estilo oscuro,
+   moderno, accesible y responsivo
+   ================================ */
+
+/* Variables para personalizar rápido */
+:root{
+  --bg-900: #0b0b0c;
+  --bg-800: #0f1113;
+  --surface: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.04);
+  --muted: #9aa3ad;
+  --accent: #ffb86b;        /* naranja cálido */
+  --accent-2: #ff7a59;      /* naranja secundario */
+  --success: #6ee7b7;
+  --radius: 12px;
+  --card-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  --glass-border: rgba(255,255,255,0.06);
+  --max-width: 1100px;
+  --gap: 20px;
+  --transition: 300ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Reset moderno */
+*{box-sizing:border-box}
+html,body,div,section,header,footer,nav,main,article,figure{margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(255,120,50,0.03), transparent 8%),
+    radial-gradient(800px 400px at 90% 90%, rgba(80,160,255,0.02), transparent 6%),
+    linear-gradient(180deg, var(--bg-900) 0%, var(--bg-800) 100%);
+  color:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  scroll-behavior:smooth;
+  padding-bottom:40px;
+}
+
+/* Contenedor central reutilizable */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:48px 24px;
+}
+
+/* Header / Hero */
+header{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--gap);
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:18px 24px;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.brand h1{
+  font-size:1.25rem;
+  letter-spacing:0.6px;
+  margin:0;
+  font-weight:700;
+}
+
+.brand p{
+  margin:0;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* Navegación */
+nav{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+nav a{
+  color: #fff;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+  transition: color var(--transition), background var(--transition), transform var(--transition);
+  outline: none;
+}
+nav a:focus-visible{
+  box-shadow: 0 0 0 3px rgba(255,184,107,0.12);
+}
+nav a:hover{
+  color:var(--bg-900);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+  transform: translateY(-2px);
+}
+
+/* HERO section (sobre-mi) */
+.hero{
+  display:flex;
+  align-items:center;
+  gap:32px;
+  padding:64px 24px;
+  max-width:var(--max-width);
+  margin:0 auto 24px;
+}
+
+.hero-left{
+  flex:1 1 420px;
+}
+
+.hero h2{
+  font-size:2.25rem;
+  margin-bottom:10px;
+  color: #fff;
+}
+
+.hero p.lead{
+  color:var(--muted);
+  margin-bottom:18px;
+  font-size:1.05rem;
+}
+
+/* CTA button simple (estilizable) */
+.btn{
+  display:inline-block;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+  color:var(--bg-900);
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.btn:hover{ transform:translateY(-3px); box-shadow: 0 10px 30px rgba(255,120,50,0.12); }
+.btn:active{ transform:translateY(-1px); }
+
+/* Secciones generales */
+section{
+  padding:48px 24px;
+}
+
+/* Títulos */
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:22px;
+}
+.section-title h3{
+  margin:0;
+  color:var(--accent);
+  font-size:1.25rem;
+  border-bottom:2px solid rgba(255, 184, 107, 0.12);
+  padding-bottom:6px;
+}
+
+/* Grid de proyectos */
+.projects-grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Tarjeta de proyecto — glass + layout */
+.proyecto{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding:14px;
+  overflow:hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.proyecto:focus-within,
+.proyecto:hover{
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 18px 50px rgba(2,6,23,0.75);
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* Imagen del proyecto — cover y altura fija */
+.proyecto .thumb{
+  width:100%;
+  height:170px;
+  background-color:#0b0b0b;
+  border-radius:8px;
+  overflow:hidden;
+  display:block;
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+.proyecto .thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform-origin:center;
+  transition: transform var(--transition);
+}
+.proyecto:hover .thumb img{ transform:scale(1.03); }
+
+/* Info */
+.proyecto h4{
+  margin:0;
+  font-size:1.05rem;
+}
+.proyecto p{
+  margin:0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* Row con acciones/links */
+.proyecto .meta{
+  margin-top:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.proyecto .tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.tag{
+  padding:6px 8px;
+  border-radius:999px;
+  background: rgba(255,255,255,0.03);
+  color:var(--muted);
+  font-size:0.8rem;
+}
+
+/* Link al juego */
+.play-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  background:transparent;
+  color:var(--accent);
+  border-radius:8px;
+  border:1px solid rgba(255,184,107,0.12);
+  text-decoration:none;
+  font-weight:700;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.play-link:hover{
+  background: linear-gradient(90deg, rgba(255,184,107,0.12), rgba(255,120,50,0.06));
+  color:#fff;
+  transform: translateY(-3px);
+}
+
+/* Contacto section */
+.contact-list{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:16px;
+}
+.contact-item{
+  background:var(--glass);
+  border-radius:10px;
+  padding:16px;
+  border:1px solid rgba(255,255,255,0.03);
+  color:var(--muted);
+}
+.contact-item a{ color:var(--accent); text-decoration:none; font-weight:700; }
+
+/* Footer */
+footer{
+  margin-top:40px;
+  border-top:1px solid rgba(255,255,255,0.03);
+  padding:28px 24px;
+  color:var(--muted);
+  text-align:center;
+  font-size:0.95rem;
+}
+
+/* Pequeñas utilidades */
+.center{ text-align:center; }
+.kicker{ color:var(--muted); font-size:0.9rem; margin-bottom:6px; }
+
+/* Animaciones sutiles (respeta prefers-reduced-motion) */
+@media (prefers-reduced-motion: no-preference){
+  .fade-up{ animation: fadeUp .6s var(--transition) both; }
+  @keyframes fadeUp{
+    from{ opacity:0; transform:translateY(8px); }
+    to{ opacity:1; transform:none; }
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .hero{ flex-direction:column; padding:36px 18px; gap:18px; }
+  .header-inner{ padding:12px 16px; }
+  header h1{ font-size:1.05rem; }
+}
+@media (max-width:480px){
+  .proyecto .thumb{ height:140px; }
+  .brand h1{ font-size:1rem; }
+  nav a{ padding:6px 8px; font-size:0.9rem; }
+}
+
+/* Accesibilidad — foco visible para enlaces y botones */
+a:focus-visible, .btn:focus-visible, .play-link:focus-visible{
+  outline: 3px solid rgba(255,184,107,0.12);
+  outline-offset: 3px;
+}
+
+/* Pequeño detalle: separador elegante entre secciones en desktop */
+@media (min-width:1000px){
+  section + section{ margin-top:6px; }
+}
+
+/* ---------- Contact layout responsive ---------- */
+/* Asegura que .contact-list y .contact-item usen el mismo estilo sin inline styles */
+.contact-list {
+  display:flex;
+  gap:28px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+/* Cada tarjeta/link de contacto */
+.contact-item {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:10px 16px;
+  border-radius:12px;
+  text-decoration:none;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+  border:1px solid rgba(255,255,255,0.03);
+  min-width:220px;
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+  color:inherit;
+}
+
+.contact-item img {
+  width:56px;
+  height:56px;
+  border-radius:8px;
+  object-fit:cover;
+  flex-shrink:0;
+}
+
+/* Texto dentro del item */
+.contact-item .kicker { margin:0; color:var(--muted); font-size:0.9rem; }
+.contact-item p{ margin:0; }
+
+/* Hover / focus states */
+.contact-item:hover,
+.contact-item:focus-visible{
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(2,6,23,0.6);
+  border-color: rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(255,184,107,0.03), rgba(255,255,255,0.008));
+}
+
+/* Desktop: más separación y tamaño */
+@media (min-width: 1100px) {
+  .contact-list { gap:40px; }
+  .contact-item { min-width:260px; padding:14px 18px; }
+  .contact-item img { width:64px; height:64px; }
+}
+
+/* Mobile: apila verticalmente y hace más compacto */
+@media (max-width: 600px) {
+  .contact-list {
+    flex-direction:column;
+    gap:12px;
+    align-items:stretch;
+  }
+  .contact-item {
+    justify-content:flex-start;
+    min-width:unset;
+    width:100%;
+    padding:10px;
+  }
+  .contact-item img { width:48px; height:48px; }
+  .contact-item .kicker { font-size:0.85rem; }
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Selector de idioma — estilo glass flotante */
+#languageSelector {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all var(--transition);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  min-width: 120px;
+  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.5);
+}
+
+/* Flecha personalizada */
+#languageSelector::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+/* Hover / Focus */
+#languageSelector:hover,
+#languageSelector:focus {
+  border-color: rgba(255, 184, 107, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.6);
+}
+
+/* Opciones del select */
+#languageSelector option {
+  background: rgba(11, 11, 12, 0.95);
+  color: #fff;
+  padding: 6px 12px;
+}
+
+/* Hover de las opciones (solo navegadores que lo soportan) */
+#languageSelector option:hover {
+  background: var(--accent);
+  color: var(--bg-900);
+}
+
+/* Avatar redondo con borde */
+.hero-right .avatar {
+  width: 160px;           /* ajusta tamaño según quieras */
+  height: 160px;          /* mismo que width para mantener círculo */
+  border-radius: 50%;     /* hace que sea redondo */
+  border: 4px solid var(--accent); /* borde con color de acento */
+  object-fit: cover;      /* recorta la imagen manteniendo proporción */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4); /* sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover opcional */
+.hero-right .avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
