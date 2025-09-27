@@ -37,7 +37,7 @@ const translations = {
     contact_roblox_desc: "Mi Perfil",
 
     // Footer
-    footer: "© 2025 Kevin12. Todos los derechos reservados."
+    footer: "© 2025 Kevin12."
   },
 
   en: {
@@ -78,6 +78,6 @@ const translations = {
     contact_roblox_desc: "My Profile",
 
     // Footer
-    footer: "© 2025 Kevin12. All rights reserved."
+    footer: "© 2025 Kevin12."
   }
 };
